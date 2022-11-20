@@ -6,12 +6,5 @@ workflows:
     jobs:
       - docker/publish:
           image: iliatai/stable-diffusion-webui-deployment
+          tag: latest
           update-description: true
-  build-docker-image-only-with-buildkit:
-    jobs:
-      - docker/publish:
-          image: iliatai/stable-diffusion-webui-deployment
-          remote-docker-version: 20.10.12
-          update-description: true
-          use-buildkit: true
-          use-remote-docker: true
