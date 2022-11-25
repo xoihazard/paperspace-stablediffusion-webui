@@ -1,0 +1,10 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@2.1.4
+workflows:
+  build-docker-image-only:
+    jobs:
+      - docker/publish:
+          image: iliatai/stable-diffusion-webui-deployment
+          tag: latest
+          update-description: true
